@@ -1,0 +1,125 @@
+@import 'media';
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    background-color: $neutral100;
+    &__logo{
+        padding: 0 3rem;
+        img{
+            vertical-align: middle;
+        }
+    }
+    &__links{
+        padding-left: 1rem;
+        ul{
+            display: flex;
+            flex-direction: row;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+            li{
+                list-style: none;
+                a{
+                    text-decoration: none;
+                    color: $neutral400;
+                    display: inline-block;
+                    img{
+                        vertical-align: middle;
+                    }
+                    &:hover{
+                        color: $neutral800;
+                        img{
+                            filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(5359%) hue-rotate(168deg) brightness(78%) contrast(84%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__signup{
+        margin-right: 3rem;
+        margin-left: auto;
+        button{
+            margin-left: 2.5rem;
+            font-size: $font-size;
+            outline: none;
+            border: none;
+            background-color: $neutral100;
+            color: $neutral400;
+            cursor: pointer;
+            &:nth-child(2){
+                padding: .6rem 1.2rem;
+                border-radius: 1rem;
+                border: 2px solid $neutral400;
+                &:hover{
+                    border-color: $neutral800;
+                }
+            }
+            @include hover;
+        }
+    }
+}
+
+.main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: $neutral100;
+    &__left{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 10rem 0 2rem 10rem;
+        h1{
+            font-size: 4rem;
+            margin-right: 2rem;
+            margin-top: 1rem;
+        }
+        p{
+            color: $neutral400;
+            line-height: 1.6rem;
+        }
+        .more{
+            padding: 1rem 1.2rem;
+            max-width: 9rem;
+            border-radius: .7rem;
+            outline: none;
+            border: none;
+            background-color: $neutral800;
+            color: $neutral100;
+            font-size: 1rem;
+            font-weight: $fw-bold;
+            margin-bottom: 3rem;
+            cursor: pointer;
+            &:hover{
+                background-color: $neutral100;
+                color: $neutral800;
+                border: 1px solid $neutral800;
+            }
+        }
+        .logos{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &__right{
+        background-image: url(../images/image-hero-desktop.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin: 2rem 0 2rem 7rem;
+    }
+}
+footer{
+    background-color: $neutral100;
+    text-align: center;
+    font-size: .6rem;
+    .attribution{
+        margin-top: 1rem;
+        a{
+            color: $neutral800;
+        }
+    }
+}
