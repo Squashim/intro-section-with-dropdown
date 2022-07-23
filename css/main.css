@@ -112,7 +112,7 @@ body {
   background-color: hsl(0deg, 0%, 98%);
   top: 0;
   right: 0;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   flex-direction: column;
 }
 .navbar__signup .menu-container .menu-close {
