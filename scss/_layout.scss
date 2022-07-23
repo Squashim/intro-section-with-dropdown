@@ -49,7 +49,7 @@
         @include desktop{
             margin-left: auto;
         }
-        button{
+        .login, .register{
             display: none;
             @include desktop{
                 display: inline-block;
@@ -60,7 +60,79 @@
                 background-color: $neutral100;
                 color: $neutral400;
                 cursor: pointer;
-                &:nth-child(3){
+                @include hover;
+            }
+        }
+        .register{
+            padding: .6rem 1.2rem;
+            border-radius: 1rem;
+            border: 2px solid $neutral400;
+            &:hover{
+                border-color: $neutral800;
+            }
+        }
+        .menu-btn{
+            cursor: pointer;
+            @include desktop{
+                display: none;
+            }
+        }
+        .menu-container{
+            display: none;
+            position: absolute;
+            height: 100vh;
+            z-index: 10;
+            width: 62vw;
+            background-color: $neutral100;
+            top: 0;
+            right: 0;
+            padding: 1rem;
+            flex-direction: column;
+            .menu-close{
+                align-self: flex-end;
+                cursor: pointer;
+            }
+            .menu-nav{
+                padding: 2rem 1rem;
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    li{
+                        list-style: none;
+                        a{
+                            text-decoration: none;
+                            color: $neutral400;
+                            display: inline-block;
+                            img{
+                                vertical-align: middle;
+                                margin-left: .5rem;
+                            }
+                            &:hover{
+                                color: $neutral800;
+                                img{
+                                    filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(5359%) hue-rotate(168deg) brightness(78%) contrast(84%);
+                                }
+                            }    
+                        }
+                    }
+                }
+            }
+            .menu-signup{
+                display: flex;
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+                .menu-login, .menu-register{
+                    font-size: $font-size;
+                    outline: none;
+                    border: none;
+                    background-color: $neutral100;
+                    color: $neutral400;
+                    cursor: pointer;
+                    @include hover;
+                }
+                .menu-register{
                     padding: .6rem 1.2rem;
                     border-radius: 1rem;
                     border: 2px solid $neutral400;
@@ -68,12 +140,6 @@
                         border-color: $neutral800;
                     }
                 }
-                @include hover;
-            }
-        }
-        span{
-            @include desktop{
-                display: none;
             }
         }
     }

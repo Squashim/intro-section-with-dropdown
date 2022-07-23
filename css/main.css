@@ -12,6 +12,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: hsl(0deg, 0%, 98%);
+  position: relative;
 }
 
 .navbar {
@@ -68,11 +69,11 @@ body {
     margin-left: auto;
   }
 }
-.navbar__signup button {
+.navbar__signup .login, .navbar__signup .register {
   display: none;
 }
 @media (min-width: 1024px) {
-  .navbar__signup button {
+  .navbar__signup .login, .navbar__signup .register {
     display: inline-block;
     margin-left: 2.5rem;
     font-size: 18px;
@@ -82,22 +83,92 @@ body {
     color: hsl(0deg, 0%, 41%);
     cursor: pointer;
   }
-  .navbar__signup button:nth-child(3) {
-    padding: 0.6rem 1.2rem;
-    border-radius: 1rem;
-    border: 2px solid hsl(0deg, 0%, 41%);
-  }
-  .navbar__signup button:nth-child(3):hover {
-    border-color: hsl(0deg, 0%, 8%);
-  }
-  .navbar__signup button:hover {
+  .navbar__signup .login:hover, .navbar__signup .register:hover {
     color: hsl(0deg, 0%, 8%);
   }
 }
+.navbar__signup .register {
+  padding: 0.6rem 1.2rem;
+  border-radius: 1rem;
+  border: 2px solid hsl(0deg, 0%, 41%);
+}
+.navbar__signup .register:hover {
+  border-color: hsl(0deg, 0%, 8%);
+}
+.navbar__signup .menu-btn {
+  cursor: pointer;
+}
 @media (min-width: 1024px) {
-  .navbar__signup span {
+  .navbar__signup .menu-btn {
     display: none;
   }
+}
+.navbar__signup .menu-container {
+  display: none;
+  position: absolute;
+  height: 100vh;
+  z-index: 10;
+  width: 62vw;
+  background-color: hsl(0deg, 0%, 98%);
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  flex-direction: column;
+}
+.navbar__signup .menu-container .menu-close {
+  align-self: flex-end;
+  cursor: pointer;
+}
+.navbar__signup .menu-container .menu-nav {
+  padding: 2rem 1rem;
+}
+.navbar__signup .menu-container .menu-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.navbar__signup .menu-container .menu-nav ul li {
+  list-style: none;
+}
+.navbar__signup .menu-container .menu-nav ul li a {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 41%);
+  display: inline-block;
+}
+.navbar__signup .menu-container .menu-nav ul li a img {
+  vertical-align: middle;
+  margin-left: 0.5rem;
+}
+.navbar__signup .menu-container .menu-nav ul li a:hover {
+  color: hsl(0deg, 0%, 8%);
+}
+.navbar__signup .menu-container .menu-nav ul li a:hover img {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(5359%) hue-rotate(168deg) brightness(78%) contrast(84%);
+}
+.navbar__signup .menu-container .menu-signup {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+.navbar__signup .menu-container .menu-signup .menu-login, .navbar__signup .menu-container .menu-signup .menu-register {
+  font-size: 18px;
+  outline: none;
+  border: none;
+  background-color: hsl(0deg, 0%, 98%);
+  color: hsl(0deg, 0%, 41%);
+  cursor: pointer;
+}
+.navbar__signup .menu-container .menu-signup .menu-login:hover, .navbar__signup .menu-container .menu-signup .menu-register:hover {
+  color: hsl(0deg, 0%, 8%);
+}
+.navbar__signup .menu-container .menu-signup .menu-register {
+  padding: 0.6rem 1.2rem;
+  border-radius: 1rem;
+  border: 2px solid hsl(0deg, 0%, 41%);
+}
+.navbar__signup .menu-container .menu-signup .menu-register:hover {
+  border-color: hsl(0deg, 0%, 8%);
 }
 
 .main {
