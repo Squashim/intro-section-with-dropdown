@@ -106,6 +106,9 @@
             }
             @include desktop{
                 font-size: 5.5rem;
+                padding-top: 5rem;
+            }
+            @media (min-width: 1350px) {
                 padding-top: 10rem;
             }
         }
@@ -120,7 +123,7 @@
             }
             @include desktop{
                 margin: 0;
-                padding: 2rem 0;
+                padding: 2rem 11rem 2rem 0;
             }
         }
         .more{
@@ -146,6 +149,7 @@
         .logos{
             margin-top: 1rem;
             display: flex;
+            align-self: start;
             align-items: center;
             justify-content: space-between;
             img{
