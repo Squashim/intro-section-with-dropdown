@@ -4,6 +4,9 @@ const menuContainer = document.querySelector(".menu-container");
 const pageMask = document.querySelector(".page-mask");
 const menuFeatures = document.querySelector(".features")
 const menuCompany = document.querySelector(".company");
+const navFeatures = document.querySelector(".nav-features-btn");
+const navCompany = document.querySelector(".nav-company-btn");
+
 
 menuOpen.addEventListener("click", () => {
     menuContainer.style.display = "flex";
@@ -27,3 +30,6 @@ function openMenuList(list){
 }
 menuFeatures.addEventListener("click", () => {openMenuList(menuFeatures)})
 menuCompany.addEventListener("click", () => {openMenuList(menuCompany)})
+navFeatures.addEventListener("click", () => {openMenuList(navFeatures)})
+navCompany.addEventListener("click", () => {openMenuList(navCompany)})
+

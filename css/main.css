@@ -53,27 +53,60 @@ body {
     padding-left: 4rem;
     display: block;
   }
-  .navbar__links ul {
+  .navbar__links .navbar-links-container {
     display: flex;
     flex-direction: row;
     gap: 2.5rem;
   }
-  .navbar__links ul li {
+  .navbar__links .navbar-links-container li {
     list-style: none;
   }
-  .navbar__links ul li a {
+  .navbar__links .navbar-links-container li a {
     text-decoration: none;
     color: hsl(0deg, 0%, 41%);
     display: inline-block;
   }
-  .navbar__links ul li a img {
+  .navbar__links .navbar-links-container li a img {
     vertical-align: middle;
   }
-  .navbar__links ul li a:hover {
+  .navbar__links .navbar-links-container li a:hover {
     color: hsl(0deg, 0%, 8%);
   }
-  .navbar__links ul li a:hover img {
+  .navbar__links .navbar-links-container li a:hover img {
     filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(5359%) hue-rotate(168deg) brightness(78%) contrast(84%);
+  }
+  .navbar__links .navbar-links-container .nav-features {
+    left: 8rem;
+    margin-top: 1rem;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    padding: 1rem;
+    background-color: hsl(0deg, 0%, 98%);
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1.5rem 0.1rem rgba(0, 0, 0, 0.2);
+  }
+  .navbar__links .navbar-links-container .nav-features li {
+    padding: 0.5rem;
+  }
+  .navbar__links .navbar-links-container .nav-features li img {
+    width: 18px;
+    height: 18px;
+    margin-right: 1rem;
+  }
+  .navbar__links .navbar-links-container .nav-company {
+    left: 21rem;
+    margin-top: 1rem;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    padding: 1rem;
+    background-color: hsl(0deg, 0%, 98%);
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1.5rem 0.1rem rgba(0, 0, 0, 0.2);
+  }
+  .navbar__links .navbar-links-container .nav-company li {
+    padding: 0.5rem;
   }
 }
 @media (min-width: 1024px) {
