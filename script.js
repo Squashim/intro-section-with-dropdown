@@ -20,8 +20,9 @@ menuClose.addEventListener("click", () => {
 })
 
 function openMenuList(list){
-    if(list.parentElement.children[1].style.display == "none"){
+    if(list.parentElement.children[1].style.display === "" || list.parentElement.children[1].style.display === "none"){
         list.children[0].src = "./images/icon-arrow-up.svg";
+        console.log(list.parentElement.children[1].style.display)
         list.parentElement.children[1].style.display = "flex";
     } else {
         list.children[0].src = "./images/icon-arrow-down.svg";
