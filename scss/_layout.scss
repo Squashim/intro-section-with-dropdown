@@ -104,7 +104,7 @@
                 cursor: pointer;
             }
             .menu-nav{
-                padding: 2rem 1rem;
+                padding: 2rem .5rem 2rem 1rem;
                 ul{
                     display: flex;
                     flex-direction: column;
@@ -143,6 +143,7 @@
                             }
                         }
                         .menu-company{
+                            display: none;
                             padding-top: 1.5rem;
                             padding-left: 1rem;
                             gap: 1.5rem;

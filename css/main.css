@@ -133,7 +133,7 @@ body {
   cursor: pointer;
 }
 .navbar__signup .menu-container .menu-nav {
-  padding: 2rem 1rem;
+  padding: 2rem 0.5rem 2rem 1rem;
 }
 .navbar__signup .menu-container .menu-nav ul {
   display: flex;
@@ -175,6 +175,7 @@ body {
   margin-left: 0.6rem;
 }
 .navbar__signup .menu-container .menu-nav ul li .menu-company {
+  display: none;
   padding-top: 1.5rem;
   padding-left: 1rem;
   gap: 1.5rem;
