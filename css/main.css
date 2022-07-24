@@ -11,8 +11,20 @@ body {
   font-family: "Epilogue", sans-serif;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background-color: hsl(0deg, 0%, 98%);
   position: relative;
+}
+
+.page-mask {
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .navbar {
@@ -104,9 +116,10 @@ body {
   }
 }
 .navbar__signup .menu-container {
+  transition: all 0.5s ease;
   display: none;
   position: absolute;
-  height: 100vh;
+  height: 100%;
   z-index: 10;
   width: 62vw;
   background-color: hsl(0deg, 0%, 98%);
@@ -144,6 +157,27 @@ body {
 }
 .navbar__signup .menu-container .menu-nav ul li a:hover img {
   filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(5359%) hue-rotate(168deg) brightness(78%) contrast(84%);
+}
+.navbar__signup .menu-container .menu-nav ul li .menu-features {
+  display: none;
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+  gap: 1.5rem;
+}
+.navbar__signup .menu-container .menu-nav ul li .menu-features li {
+  height: 18px;
+}
+.navbar__signup .menu-container .menu-nav ul li .menu-features li img {
+  width: 18px;
+  height: 100%;
+}
+.navbar__signup .menu-container .menu-nav ul li .menu-features li a {
+  margin-left: 0.6rem;
+}
+.navbar__signup .menu-container .menu-nav ul li .menu-company {
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+  gap: 1.5rem;
 }
 .navbar__signup .menu-container .menu-signup {
   display: flex;

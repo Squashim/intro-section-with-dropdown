@@ -9,6 +9,7 @@ body{
     font-family: $font-family;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     background-color: $neutral100;
     position: relative;
 }

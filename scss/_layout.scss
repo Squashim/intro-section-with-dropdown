@@ -1,4 +1,14 @@
 @import 'media';
+.page-mask{
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
 .navbar{
     max-width: 100%;
     display: flex;
@@ -78,9 +88,10 @@
             }
         }
         .menu-container{
+            transition: all .5s ease;
             display: none;
             position: absolute;
-            height: 100vh;
+            height: 100%;
             z-index: 10;
             width: 62vw;
             background-color: $neutral100;
@@ -114,6 +125,27 @@
                                     filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(5359%) hue-rotate(168deg) brightness(78%) contrast(84%);
                                 }
                             }    
+                        }
+                        .menu-features{
+                            display: none;
+                            padding-top: 1.5rem;
+                            padding-left: 1rem;
+                            gap: 1.5rem;
+                            li{
+                                height: 18px;
+                                img{
+                                    width: 18px;
+                                    height: 100%;
+                                }
+                                a{
+                                    margin-left: .6rem;
+                                }
+                            }
+                        }
+                        .menu-company{
+                            padding-top: 1.5rem;
+                            padding-left: 1rem;
+                            gap: 1.5rem;
                         }
                     }
                 }
